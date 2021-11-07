@@ -14,6 +14,13 @@ class InfoApi internal constructor(retrofit: Retrofit) {
     /**
      * Returns the respective endpoint.
      */
+    fun character(characterId: String): CharacterEndpoint {
+        return CharacterEndpoint(internalApi, characterId)
+    }
+
+    /**
+     * Returns the respective endpoint.
+     */
     fun entryCore(entryId: String): EntryCoreEndpoint {
         return EntryCoreEndpoint(internalApi, entryId)
     }

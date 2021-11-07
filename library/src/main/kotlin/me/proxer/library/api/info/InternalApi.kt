@@ -1,6 +1,7 @@
 package me.proxer.library.api.info
 
 import me.proxer.library.ProxerCall
+import me.proxer.library.entity.info.Character
 import me.proxer.library.entity.info.Comment
 import me.proxer.library.entity.info.Entry
 import me.proxer.library.entity.info.EntryCore
@@ -22,6 +23,9 @@ import retrofit2.http.Query
  * @author Ruben Gees
  */
 internal interface InternalApi {
+
+    @GET("info/character")
+    fun character(@Query("id") id: String?): ProxerCall<Character>
 
     @GET("info/entry")
     fun entryCore(@Query("id") id: String?): ProxerCall<EntryCore>
