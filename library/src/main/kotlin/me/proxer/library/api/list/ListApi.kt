@@ -14,6 +14,13 @@ class ListApi internal constructor(retrofit: Retrofit) {
     /**
      * Returns the respective endpoint.
      */
+    fun characterSearch(): CharacterSearchEndpoint {
+        return CharacterSearchEndpoint(internalApi)
+    }
+
+    /**
+     * Returns the respective endpoint.
+     */
     fun mediaList(): MediaListEndpoint {
         return MediaListEndpoint(internalApi)
     }

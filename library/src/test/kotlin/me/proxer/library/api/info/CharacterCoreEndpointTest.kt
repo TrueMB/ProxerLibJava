@@ -29,7 +29,7 @@ class CharacterCoreEndpointTest : ProxerTest() {
         birthday = Date(709164000000L),
         height = "176",
         weight = "79",
-        description = setOf(
+        descriptions = setOf(
             Description(
                 descriptionType = DescriptionType.INTRO,
                 text = "Lorenor Zorro ist ein Pirat aus der Serie One Piece. Er ist Mitglied der Strohhutbande " +

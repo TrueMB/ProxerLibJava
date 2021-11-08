@@ -1,6 +1,7 @@
 package me.proxer.library.api.list
 
 import me.proxer.library.ProxerCall
+import me.proxer.library.entity.list.CharacterListEntry
 import me.proxer.library.entity.list.IndustryCore
 import me.proxer.library.entity.list.IndustryProject
 import me.proxer.library.entity.list.MediaListEntry
@@ -9,6 +10,7 @@ import me.proxer.library.entity.list.TranslatorGroupCore
 import me.proxer.library.entity.list.TranslatorGroupProject
 import me.proxer.library.enums.Category
 import me.proxer.library.enums.Country
+import me.proxer.library.enums.DescriptionType
 import me.proxer.library.enums.IndustryType
 import me.proxer.library.enums.Language
 import me.proxer.library.enums.LengthBound
@@ -62,6 +64,16 @@ internal interface InternalApi {
         @Query("p") page: Int?,
         @Query("limit") limit: Int?
     ): ProxerCall<List<MediaListEntry>>
+
+    @GET("list/characters")
+    fun characterSearch(
+        @Query("start") start: String?,
+        @Query("contains") contains: String?,
+        @Query("search") search: String?,
+        @Query("subject") subject: DescriptionType?,
+        @Query("page") page: Int?,
+        @Query("limit") limit: Int?
+    ): ProxerCall<List<CharacterListEntry>>
 
     @GET("list/translatorgroups")
     fun translatorGroupList(

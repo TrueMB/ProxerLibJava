@@ -17,7 +17,7 @@ import java.util.Date
  * @property birthday The birthday.
  * @property height The height.
  * @property weight The weight.
- * @property description The description.
+ * @property descriptions The description.
  * @property persons The persons in contact with the character
  *
  * @author Ruben Gees
@@ -33,6 +33,6 @@ data class Character(
     @Json(name = "birthday") val birthday: Date,
     @Json(name = "height") val height: String,
     @Json(name = "weight") val weight: String,
-    @Json(name = "description") val description: Set<Description>,
+    @Json(name = "description") val descriptions: Set<Description>,
     @Json(name = "persons") val persons: Set<PersonCore>
 ) : ProxerIdItem
