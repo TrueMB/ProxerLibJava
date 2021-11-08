@@ -3,8 +3,8 @@ package me.proxer.library.entity.info
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import me.proxer.library.entity.ProxerIdItem
-import me.proxer.library.enums.*
-import java.util.*
+import me.proxer.library.enums.Gender
+import java.util.Date
 
 
 /**
