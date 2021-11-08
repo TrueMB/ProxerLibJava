@@ -12,5 +12,4 @@ class CharacterEndpoint internal constructor(
     override fun build(): ProxerCall<Character> {
         return internalApi.character(id)
     }
-
 }

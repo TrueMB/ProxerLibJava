@@ -6,7 +6,6 @@ import me.proxer.library.entity.ProxerIdItem
 import me.proxer.library.enums.Gender
 import java.util.Date
 
-
 /**
  * Entity holding all info of a character.
  *

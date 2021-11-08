@@ -1,12 +1,17 @@
 package me.proxer.library.api.info
 
 import me.proxer.library.ProxerTest
-import me.proxer.library.entity.info.*
-import me.proxer.library.enums.*
+import me.proxer.library.entity.info.Character
+import me.proxer.library.entity.info.Description
+import me.proxer.library.entity.info.PersonCore
+import me.proxer.library.enums.DescriptionType
+import me.proxer.library.enums.Gender
+import me.proxer.library.enums.Language
+import me.proxer.library.enums.OccupationType
 import me.proxer.library.runRequest
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
-import java.util.*
+import java.util.Date
 
 /**
  * @author TrueMB
@@ -14,6 +19,7 @@ import java.util.*
 class CharacterCoreEndpointTest : ProxerTest() {
 
     private val expectedCharacter = Character(
+
         id = "1",
         name = "Test Charakter",
         gender = Gender.UNKNOWN,
@@ -23,22 +29,26 @@ class CharacterCoreEndpointTest : ProxerTest() {
         birthday = Date(709164000000L),
         height = "176",
         weight = "79",
-        description = setOf(Description(
+        description = setOf(
+            Description(
                 descriptionType = DescriptionType.INTRO,
                 text = "Lorenor Zorro ist ein Pirat aus der Serie One Piece. Er ist Mitglied der Strohhutbande " +
                     "und der erste Kämpfer der von [I]Monkey D. Ruffy[/I] rekrutiert wurde. Sein Ziel ist es, " +
                     "der beste Schwertkämpfer der Welt zu werden. Dieser Charakter ist zum Testen der Funktionen dar.",
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             Description(
                 descriptionType = DescriptionType.APPEARANCE,
                 text = "Zorro hat kurze grüne Haare über die er in Kämpfen ein schwarzes Kopftuch trägt, " +
                     "welches er ansonsten um den Arm gewickelt hat. Meistens trägt er weisses T-Shirt und eine " +
-                    "schwarze Hose. Er hat immer eine gruene Bauchbinde umgewickelt mit denen er seine drei Schwerter " +
-                    "befestigt. Ausserdem hat er drei goldene Ohrringe in seinem linken Ohr. Er hat eine grosse Narbe " +
-                    "quer über die Brust und zwei weitere um seine Knöchel die er sich selbst zugefügt hat. " +
-                    "Nach dem Zeitsprung hat er ausserdem eine Narbe über dem linken Auge.",
-                Language.GERMAN),
+                    "schwarze Hose. Er hat immer eine gruene Bauchbinde umgewickelt mit denen er seine " +
+                    "drei Schwerter befestigt. Ausserdem hat er drei goldene Ohrringe in seinem linken Ohr. " +
+                    "Er hat eine grosse Narbe quer über die Brust und zwei weitere um seine Knöchel " +
+                    "die er sich selbst zugefügt hat. Nach dem Zeitsprung hat er " +
+                    "ausserdem eine Narbe über dem linken Auge.",
+                Language.GERMAN
+            ),
 
             Description(
                 descriptionType = DescriptionType.PERSONALITY,
@@ -46,7 +56,8 @@ class CharacterCoreEndpointTest : ProxerTest() {
                     "oder um Gnade bitten. Allerdings kann er seinen Stolz auch herunterschlucken, " +
                     "was er zum Beispiel tat als er Falkenauge bat ihn als Schüler anzunehmen. Generell ist Zorro " +
                     "ein sehr selbstbewusster Mensch. Er streitet sich sehr oft mit Sanji.",
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             Description(
                 descriptionType = DescriptionType.SKILLS,
@@ -57,7 +68,8 @@ class CharacterCoreEndpointTest : ProxerTest() {
                     "Mit Asura kann er Kopien von sich selbst erzeugen, diese sind jedoch nur Illusionen und " +
                     "er kann nur zwei auf einmal bilden. Desweitern hat er enorme physische Kräfte und " +
                     "eine beachtliche Regenerationskraft. Ausserdem besitzt er das Haki.",
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             Description(
                 descriptionType = DescriptionType.PAST,
@@ -70,16 +82,20 @@ class CharacterCoreEndpointTest : ProxerTest() {
                     "In den folgenden neun Jahren perfektioniert er seinen Drei-Schwert-Stil und macht sich " +
                     "dann auf die Suche nach Falkenauge, wobei er sich mit Kopfgeldjägertätigkeiten über Wasser" +
                     " hält.",
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             Description(
                 descriptionType = DescriptionType.TRIVIA,
                 text = "Zorro Geburtsdatum, der 11.11. ist ein Zahlenpalindrom, da er von vorne nach hinten " +
                     "und von hinten nach vorne gelesen das Gleiche ergibt. Ausserdem ist das japanische Wort " +
                     "für Palindrom Zorome dessen Kurzform Zoro ist.",
-                Language.GERMAN)
+                Language.GERMAN
+            )
         ),
-        persons = setOf(PersonCore(id = "140", occupation = OccupationType.SEIYUU, Language.OTHER, name = "Test Person"))
+        persons = setOf(
+            PersonCore(id = "140", occupation = OccupationType.SEIYUU, Language.OTHER, name = "Test Person")
+        )
     )
 
     @Test

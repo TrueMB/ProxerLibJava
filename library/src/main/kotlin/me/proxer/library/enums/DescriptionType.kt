@@ -3,7 +3,6 @@ package me.proxer.library.enums
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
-
 /**
  * Enum holding the available description Types.
  *
@@ -34,4 +33,3 @@ enum class DescriptionType {
     @Json(name = "trivia")
     TRIVIA,
 }
-
