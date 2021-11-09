@@ -45,7 +45,7 @@ internal class DelimitedEnumSetAdapterFactory : JsonAdapter.Factory {
         )
     }
 
-    private class DelimitedEnumSetAdapter<T : Enum<T>> internal constructor(
+    private class DelimitedEnumSetAdapter<T : Enum<T>>(
         private val enumType: Class<T>,
         private val delimiter: String
     ) : JsonAdapter<Set<T>>() {
@@ -56,7 +56,7 @@ internal class DelimitedEnumSetAdapterFactory : JsonAdapter.Factory {
                     val annotation = enumType.getField(constant.name).getAnnotation(Json::class.java)
                     val name = annotation?.name ?: constant.name
 
-                    name.toLowerCase(Locale.US) to constant
+                    name.lowercase(Locale.US) to constant
                 } catch (error: NoSuchFieldException) {
                     throw AssertionError("Missing field in ${enumType.name}", error)
                 }
@@ -73,7 +73,7 @@ internal class DelimitedEnumSetAdapterFactory : JsonAdapter.Factory {
 
                 emptySet()
             } else {
-                val rawParts = reader.nextString().trim().toLowerCase(Locale.US)
+                val rawParts = reader.nextString().trim().lowercase(Locale.US)
 
                 if (rawParts.isEmpty()) {
                     emptySet()

@@ -4,6 +4,8 @@ complexity:
 exceptions:
   TooGenericExceptionCaught:
     active: false
+  SwallowedException:
+    active: false
 
 performance:
   SpreadOperator:
@@ -13,4 +15,6 @@ style:
   MagicNumber:
     active: false
   ForbiddenComment:
+    active: false
+  UnnecessaryAbstractClass:
     active: false

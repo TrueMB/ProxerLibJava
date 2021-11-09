@@ -15,7 +15,7 @@ suspend fun <T : Any> ProxerCall<T>.await(): T {
                 if (result != null) {
                     continuation.resume(result)
                 } else {
-                    continuation.resumeWithException(NullPointerException())
+                    continuation.resumeWithException(NullPointerException("Couldn't load any data."))
                 }
             },
             { error -> continuation.resumeWithException(error) }
