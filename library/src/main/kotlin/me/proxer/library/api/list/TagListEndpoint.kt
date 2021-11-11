@@ -12,7 +12,10 @@ import me.proxer.library.enums.TagType
  *
  * @author Ruben Gees
  */
-class TagListEndpoint internal constructor(private val internalApi: InternalApi) : Endpoint<List<Tag>> {
+class TagListEndpoint internal constructor(
+    private val internalApi: InternalApi
+
+) : Endpoint<List<Tag>> {
 
     private var name: String? = null
     private var type: TagType? = null

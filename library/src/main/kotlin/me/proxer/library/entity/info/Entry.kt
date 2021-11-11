@@ -3,6 +3,7 @@ package me.proxer.library.entity.info
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import me.proxer.library.entity.ProxerIdItem
+import me.proxer.library.entity.list.CharacterListEntry
 import me.proxer.library.entity.list.IndustryCore
 import me.proxer.library.enums.Category
 import me.proxer.library.enums.FskConstraint
@@ -60,6 +61,8 @@ data class Entry(
     @Json(name = "seasons") val seasons: List<EntrySeasonInfo>,
     @Json(name = "groups") val translatorGroups: List<EntryTranslatorGroup>,
     @Json(name = "publisher") val industries: List<IndustryCore>,
+    @Json(name = "characters") val characters: Set<CharacterListEntry>,
+    @Json(name = "persons") val persons: Set<PersonCore>,
     @Json(name = "tags") val tags: List<InfoTag>,
     @Json(name = "genres") val genres: List<InfoGenre>
 ) : ProxerIdItem {

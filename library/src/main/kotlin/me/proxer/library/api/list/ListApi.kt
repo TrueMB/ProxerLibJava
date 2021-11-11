@@ -35,6 +35,13 @@ class ListApi internal constructor(retrofit: Retrofit) {
     /**
      * Returns the respective endpoint.
      */
+    fun personSearch(): PersonSearchEndpoint {
+        return PersonSearchEndpoint(internalApi)
+    }
+
+    /**
+     * Returns the respective endpoint.
+     */
     fun translatorGroupList(): TranslatorGroupListEndpoint {
         return TranslatorGroupListEndpoint(internalApi)
     }

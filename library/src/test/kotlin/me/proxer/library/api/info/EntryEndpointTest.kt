@@ -7,15 +7,19 @@ import me.proxer.library.entity.info.EntrySeasonInfo
 import me.proxer.library.entity.info.EntryTranslatorGroup
 import me.proxer.library.entity.info.InfoGenre
 import me.proxer.library.entity.info.InfoTag
+import me.proxer.library.entity.info.PersonCore
 import me.proxer.library.entity.info.Synonym
+import me.proxer.library.entity.list.CharacterListEntry
 import me.proxer.library.entity.list.IndustryCore
 import me.proxer.library.enums.Category
+import me.proxer.library.enums.CharacterType
 import me.proxer.library.enums.Country
 import me.proxer.library.enums.IndustryType
 import me.proxer.library.enums.License
 import me.proxer.library.enums.MediaLanguage
 import me.proxer.library.enums.MediaState
 import me.proxer.library.enums.Medium
+import me.proxer.library.enums.OccupationType
 import me.proxer.library.enums.Season
 import me.proxer.library.enums.SynonymType
 import me.proxer.library.runRequest
@@ -60,6 +64,8 @@ class EntryEndpointTest : ProxerTest() {
         industries = listOf(
             IndustryCore(id = "19", name = "Kodansha", type = IndustryType.PUBLISHER, country = Country.JAPAN)
         ),
+        characters = setOf(CharacterListEntry("108", "Asuna Yuuki", CharacterType.MAIN, null)),
+        persons = setOf(PersonCore("677", OccupationType.ORIGINAL_CREATOR, null, "Reki Kawahara")),
         tags = listOf(
             InfoTag(
                 id = "2027",

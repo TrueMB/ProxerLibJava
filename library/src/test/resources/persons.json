@@ -1,0 +1,16 @@
+{
+  "error": 0,
+  "message": "Abfrage erfolgreich",
+  "data": [
+    {
+      "name": "Justin Cook",
+      "pid": "1272",
+      "type": "misc"
+    },
+    {
+      "name": "Seiji Mizushima",
+      "pid": "1974",
+      "type": "director"
+    }
+  ]
+}

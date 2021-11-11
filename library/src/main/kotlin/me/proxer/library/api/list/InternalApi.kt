@@ -5,12 +5,13 @@ import me.proxer.library.entity.list.CharacterListEntry
 import me.proxer.library.entity.list.IndustryCore
 import me.proxer.library.entity.list.IndustryProject
 import me.proxer.library.entity.list.MediaListEntry
+import me.proxer.library.entity.list.PersonListEntry
 import me.proxer.library.entity.list.Tag
 import me.proxer.library.entity.list.TranslatorGroupCore
 import me.proxer.library.entity.list.TranslatorGroupProject
 import me.proxer.library.enums.Category
 import me.proxer.library.enums.Country
-import me.proxer.library.enums.DescriptionType
+import me.proxer.library.enums.CharacterDescriptionType
 import me.proxer.library.enums.IndustryType
 import me.proxer.library.enums.Language
 import me.proxer.library.enums.LengthBound
@@ -18,6 +19,7 @@ import me.proxer.library.enums.MediaListSortCriteria
 import me.proxer.library.enums.MediaSearchSortCriteria
 import me.proxer.library.enums.MediaType
 import me.proxer.library.enums.Medium
+import me.proxer.library.enums.PersonDescriptionType
 import me.proxer.library.enums.ProjectState
 import me.proxer.library.enums.SortType
 import me.proxer.library.enums.TagRateFilter
@@ -70,7 +72,7 @@ internal interface InternalApi {
         @Query("start") start: String?,
         @Query("contains") contains: String?,
         @Query("search") search: String?,
-        @Query("subject") subject: DescriptionType?,
+        @Query("subject") subject: CharacterDescriptionType?,
         @Query("page") page: Int?,
         @Query("limit") limit: Int?
     ): ProxerCall<List<CharacterListEntry>>
@@ -92,6 +94,16 @@ internal interface InternalApi {
         @Query("p") page: Int?,
         @Query("limit") limit: Int?
     ): ProxerCall<List<IndustryCore>>
+
+    @GET("list/persons")
+    fun personList(
+        @Query("start") searchStart: String?,
+        @Query("contains") contains: String?,
+        @Query("search") search: String?,
+        @Query("subject") subject: PersonDescriptionType?,
+        @Query("p") page: Int?,
+        @Query("limit") limit: Int?
+    ): ProxerCall<List<PersonListEntry>>
 
     @GET("list/translatorgroupprojects")
     fun translatorGroupProjectList(

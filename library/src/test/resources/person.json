@@ -1,0 +1,74 @@
+{
+  "error": 0,
+  "message": "Abfrage erfolgreich",
+  "data": {
+    "id": "133",
+    "name": "Haruka Tomatsu",
+    "gender": "f",
+    "bloodtype": "B",
+    "birthday": "1990-02-04",
+    "birthplace": "Ichinomiya / Japan",
+    "nationality": "JP",
+    "residence": "Tokyo / Japan",
+    "description": [
+      {
+        "subject": "intro",
+        "text": "[b]Haruka Tomatsu[/b] ist eine japanische Synchronsprecherin und Sängerin. Sie ist am 4. Februar 1990 in der Präfektur Aichi in Japan geboren worden und steht bei der Talentagentur [i]Music Ray'n Inc[/i] unter Vertrag. Musikalisch gesehen beschäftigt sich Tomatsu hauptsächlich mit Songs rund um Anime. Abseits davon produziert sie allerdings auch Songs und Alben.",
+        "language": "de"
+      },
+      {
+        "subject": "biography",
+        "text": "2005 nahm sie an der [i]1. Music Ray’n Super Seiyū Audition[/i] teil, welchen sie letztlich auch gewann und damit direkt unter Vertrag genommen wurde. Tomatsu hatte ihr Debüt als Synchronsprecherin im Anime [url=http://proxer.me/info/618#top][b][i]Shinkyoku Soukai Polyphonica[/i][/b][/url] als [i]Corticarte Apa Lagranges[/i]. Seitdem hatte sie andere Hauptrollen wie [i]Lala Satalin Deviluke[/i] in [url=http://proxer.me/info/91#top][b][i]To LOVE-Ru[/i][/b][/url], [i]Shiho Sannomiya[/i] in [url=http://proxer.me/info/1174#top][b][i]Zettai Karen Children[/i][/b][/url], [i]M.M[/i] in [url=http://proxer.me/info/1012#top][b][i]Kemeko Deluxe![/i][/b][/url] und [i]Nagi[/i] in [url=http://proxer.me/info/391#top][b][i]Kannagi[/i][/b][/url].Ihr Hochschulstudium in Tokio begann sie im April 2008. Am 15. Februar 2009 gründete sie zusammen mit [url=https://proxer.me/persons?id=819#top][i]Ayahi Takagaki[/i][/url], [url=https://proxer.me/persons?id=26#top][i]Minako Kotobuki[/i][/url] und [url=https://proxer.me/persons?id=275#top][i]Aki Toyosaki[/i][/url] eine Musikgruppe, welche sie den Namen [URL=https://proxer.me/interprets?id=214#top][i]Sphere[/i][/URL] gaben.",
+        "language": "de"
+      },
+      {
+        "subject": "awards",
+        "text": "Sie erhielt neben [url=https://proxer.me/persons?id=130#top][i]Kana Asumi[/i][/url] als [I]Beste Nachwuchssprecherin [/I]für die Rollen [i]Nagi[/i] aus [url=http://proxer.me/info/391#top][b][i]Kannagi[/i][/b][/url], [i]Lala Satalin Deviluke[/i] aus [url=http://proxer.me/info/91#top][b][i]To LOVE-Ru[/i][/b][/url] und [i]Shiho Sannomiya[/i] aus [url=http://proxer.me/info/1174#top][b][i]Zettai Karen Children[/i][/b][/url] den 3. [i]Seiyū Award[/i] 2009.",
+        "language": "de"
+      }
+    ],
+    "names": [
+      {
+        "name": "Haruka Tomatsu",
+        "alternative": "戸松 遥",
+        "type": "name",
+        "display_name": "1"
+      },
+      {
+        "name": "Harukasu",
+        "alternative": "ハルカス",
+        "type": "pseudonym",
+        "display_name": "0"
+      }
+    ],
+    "occupations": [
+      {
+        "type": "musician"
+      },
+      {
+        "type": "seiuu"
+      }
+    ],
+    "entrys": [],
+    "characters": [
+      {
+        "cid": "108",
+        "type": "seiyuu",
+        "language": "jp",
+        "name": "Asuna Yuuki"
+      },
+      {
+        "cid": "327",
+        "type": "seiyuu",
+        "language": "jp",
+        "name": "Haruka Takayama"
+      },
+      {
+        "cid": "393",
+        "type": "seiyuu",
+        "language": "jp",
+        "name": "Morgiana"
+      }
+    ]
+  }
+}
