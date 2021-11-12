@@ -37,7 +37,8 @@ class PersonEndpointTest : ProxerTest() {
                    | [i]Music Ray'n Inc[/i] unter Vertrag. Musikalisch gesehen beschäftigt sich Tomatsu hauptsächlich
                    | mit Songs rund um Anime. Abseits davon produziert sie allerdings auch Songs und Alben.
                     """.trimMargin().replace("\n", ""),
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             PersonDescription(
                 PersonDescriptionType.BIOGRAPHY,
@@ -57,7 +58,8 @@ class PersonEndpointTest : ProxerTest() {
                     | eine Musikgruppe, welche sie den
                     | Namen [URL=https://proxer.me/interprets?id=214#top][i]Sphere[/i][/URL] gaben.
                     """.trimMargin().replace("\n", ""),
-                Language.GERMAN),
+                Language.GERMAN
+            ),
 
             PersonDescription(
                 PersonDescriptionType.AWARDS,
@@ -69,7 +71,8 @@ class PersonEndpointTest : ProxerTest() {
                     | aus [url=http://proxer.me/info/1174#top][b][i]Zettai Karen Children[/i][/b][/url] den 3.
                     | [i]Seiyū Award[/i] 2009.
                     """.trimMargin().replace("\n", ""),
-                Language.GERMAN)
+                Language.GERMAN
+            )
         ),
         occupations = setOf(
             Occupation(OccupationType.MUSICIAN),
@@ -96,9 +99,7 @@ class PersonEndpointTest : ProxerTest() {
                 language = Language.OTHER,
                 name = "Morgiana"
             )
-        ),
-
-
+        )
     )
 
     @Test
