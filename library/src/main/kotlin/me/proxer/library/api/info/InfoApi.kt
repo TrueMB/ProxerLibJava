@@ -91,6 +91,20 @@ class InfoApi internal constructor(retrofit: Retrofit) {
     /**
      * Returns the respective endpoint.
      */
+    fun person(personId: String): PersonEndpoint {
+        return PersonEndpoint(internalApi, personId)
+    }
+
+    /**
+     * Returns the respective endpoint.
+     */
+    fun persons(entryId: String): PersonsCoreEndpoint {
+        return PersonsCoreEndpoint(internalApi, entryId)
+    }
+
+    /**
+     * Returns the respective endpoint.
+     */
     fun subscribe(entryId: String): ModifyUserInfoEndpoint {
         return ModifyUserInfoEndpoint(internalApi, entryId, UserInfoType.SUBSCRIBE)
     }

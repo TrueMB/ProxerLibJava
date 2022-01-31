@@ -7,32 +7,32 @@ import me.proxer.library.enums.Gender
 import java.util.Date
 
 /**
- * Entity holding all info of a character.
+ * Entity with basic Information from a Person.
  *
  * @property name The name.
  * @property gender The gender
- * @property hairColor The hair color.
- * @property eyeColor The eye color.
  * @property bloodType The BloodType.
  * @property birthday The birthday.
- * @property height The height.
- * @property weight The weight.
+ * @property birthplace The birthplace.
+ * @property nationality The nationality.
+ * @property residence The residence.
  * @property descriptions The descriptions.
- * @property persons The persons in contact with the character
+ * @property occupations The occupations.
+ * @property characters The characters in contact with the person
  *
- * @author Ruben Gees
+ * @author TrueMB
  */
 @JsonClass(generateAdapter = true)
-data class Character(
+data class Person(
     @Json(name = "id") override val id: String,
     @Json(name = "name") val name: String,
     @Json(name = "gender") val gender: Gender,
-    @Json(name = "hair_color") val hairColor: String,
-    @Json(name = "eye_color") val eyeColor: String,
     @Json(name = "bloodtype") val bloodType: String,
     @Json(name = "birthday") val birthday: Date,
-    @Json(name = "height") val height: String,
-    @Json(name = "weight") val weight: String,
-    @Json(name = "description") val descriptions: Set<CharacterDescription>,
-    @Json(name = "persons") val persons: Set<PersonCore>
+    @Json(name = "birthplace") val birthplace: String,
+    @Json(name = "nationality") val nationality: String,
+    @Json(name = "residence") val residence: String,
+    @Json(name = "description") val descriptions: Set<PersonDescription>,
+    @Json(name = "occupations") val occupations: Set<Occupation>,
+    @Json(name = "characters") val characters: Set<CharacterCore>
 ) : ProxerIdItem

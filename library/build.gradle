@@ -1,3 +1,5 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     id 'org.jetbrains.kotlin.jvm'
     id "org.jetbrains.kotlin.kapt"
@@ -15,7 +17,7 @@ plugins {
 
 apply from: "${rootDir}/gradle/dependencies.gradle"
 
-tasks.withType(org.jetbrains.dokka.gradle.DokkaTask).configureEach {
+tasks.withType(DokkaTask).configureEach {
     dokkaSourceSets {
         configureEach {
             sourceLink {
@@ -35,13 +37,13 @@ tasks.dokkaJavadoc.configure {
 }
 
 task sourceJar(type: Jar) {
-    archiveClassifier = "sources"
+    archiveClassifier.set("sources")
 
     from sourceSets.main.allSource
 }
 
 task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
-    archiveClassifier = "javadoc"
+    archiveClassifier.set("javadoc")
 
     from javadoc.destinationDir
 }

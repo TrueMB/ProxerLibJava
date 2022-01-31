@@ -4,13 +4,13 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Enum holding the available description Types.
+ * Enum holding the available character description Types.
  *
  * @author TrueMB
  */
 
 @JsonClass(generateAdapter = false)
-enum class DescriptionType {
+enum class CharacterDescriptionType {
 
     @Json(name = "intro")
     INTRO,

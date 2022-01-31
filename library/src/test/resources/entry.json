@@ -77,6 +77,20 @@
         "country": "en"
       }
     ],
+    "characters": [
+      {
+        "id": "108",
+        "name": "Asuna Yuuki",
+        "type": "main"
+      }
+    ],
+    "persons": [
+      {
+        "name": "Reki Kawahara",
+        "pid": "677",
+        "type": "original-creator"
+      }
+    ],
     "publisher": [
       {
         "name": "Kodansha",

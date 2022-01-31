@@ -9,6 +9,8 @@ import me.proxer.library.entity.info.EpisodeInfo
 import me.proxer.library.entity.info.ForumDiscussion
 import me.proxer.library.entity.info.Industry
 import me.proxer.library.entity.info.MediaUserInfo
+import me.proxer.library.entity.info.Person
+import me.proxer.library.entity.info.PersonCore
 import me.proxer.library.entity.info.Recommendation
 import me.proxer.library.entity.info.Relation
 import me.proxer.library.entity.info.TranslatorGroup
@@ -60,6 +62,12 @@ internal interface InternalApi {
 
     @GET("info/industry")
     fun industry(@Query("id") id: String?): ProxerCall<Industry>
+
+    @GET("info/person")
+    fun person(@Query("id") id: String?): ProxerCall<Person>
+
+    @GET("info/persons")
+    fun persons(@Query("id") id: String?): ProxerCall<List<PersonCore>>
 
     @FormUrlEncoded
     @POST("info/setuserinfo")

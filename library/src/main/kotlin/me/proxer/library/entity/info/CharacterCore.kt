@@ -7,18 +7,18 @@ import me.proxer.library.enums.Language
 import me.proxer.library.enums.OccupationType
 
 /**
- * Entity with basic Information from a Person.
+ * Entity with basic Information from a Character.
  *
  * @property name The name.
- * @property occupation The occupation
+ * @property type The type
  * @property language The language
  *
  * @author TrueMB
  */
 @JsonClass(generateAdapter = true)
-data class PersonCore(
-    @Json(name = "pid") override val id: String,
-    @Json(name = "type") val occupation: OccupationType,
-    @Json(name = "language") val language: Language? = null,
+data class CharacterCore(
+    @Json(name = "cid") override val id: String,
+    @Json(name = "type") val type: OccupationType,
+    @Json(name = "language") val language: Language,
     @Json(name = "name") val name: String
 ) : ProxerIdItem
