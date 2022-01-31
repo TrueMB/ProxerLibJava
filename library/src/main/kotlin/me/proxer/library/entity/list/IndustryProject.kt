@@ -28,8 +28,8 @@ import me.proxer.library.internal.adapter.DelimitedStringSet
 data class IndustryProject(
     @Json(name = "id") override val id: String,
     @Json(name = "name") val name: String,
-    @field:DelimitedStringSet(valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
-    @field:DelimitedEnumSet @Json(name = "fsk") val fskConstraints: Set<FskConstraint>,
+    @field:DelimitedStringSet(delimiter = " ", valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
+    @field:DelimitedEnumSet(delimiter = " ") @Json(name = "fsk") val fskConstraints: Set<FskConstraint>,
     @Json(name = "medium") val medium: Medium,
     @Json(name = "type") val industryType: IndustryType,
     @Json(name = "state") val state: MediaState,

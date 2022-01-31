@@ -3,20 +3,28 @@ plugins {
     id "application"
 }
 
-mainClassName = "me.proxer.sample.News"
-
-run {
-    standardInput = System.in
-}
-
 dependencies {
     implementation project(":library")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
         allWarningsAsErrors = true
         freeCompilerArgs = ["-Xjsr305=strict", "-progressive"]
+    }
+}
+repositories {
+    mavenCentral()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }

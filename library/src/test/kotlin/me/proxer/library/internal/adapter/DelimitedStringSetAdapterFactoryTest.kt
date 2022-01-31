@@ -144,16 +144,16 @@ class DelimitedStringSetAdapterFactoryTest {
 
     @JsonClass(generateAdapter = true)
     data class StringSetTestClass(
-        @field:DelimitedStringSet val value: Set<String>
+        @field:DelimitedStringSet(delimiter = " ", valuesToKeep = []) val value: Set<String>
     )
 
     @JsonClass(generateAdapter = true)
     data class StringSetWithDelimiterTestClass(
-        @field:DelimitedStringSet(delimiter = ", ") val value: Set<String>
+        @field:DelimitedStringSet(delimiter = ", ", valuesToKeep = []) val value: Set<String>
     )
 
     @JsonClass(generateAdapter = true)
     data class StringSetWithValuesToKeepTestClass(
-        @field:DelimitedStringSet(valuesToKeep = ["a b"]) val value: Set<String>
+        @field:DelimitedStringSet(delimiter = " ", valuesToKeep = ["a b"]) val value: Set<String>
     )
 }

@@ -75,7 +75,7 @@ class ProxerApi private constructor(retrofit: Retrofit) {
             "sha256/C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M="
         )
 
-        private const val DEFAULT_USER_AGENT = "ProxerLibJava/" + BuildConfig.VERSION
+        private const val DEFAULT_USER_AGENT = "ProxerLibJava/" + BuildConfig.version
     }
 
     /**
@@ -187,6 +187,7 @@ class ProxerApi private constructor(retrofit: Retrofit) {
         /**
          * Sets a custom login token manager.
          */
+        @Suppress("unused")
         fun loginTokenManager(loginTokenManager: LoginTokenManager) = this.apply {
             this.loginTokenManager = loginTokenManager
         }
@@ -196,6 +197,7 @@ class ProxerApi private constructor(retrofit: Retrofit) {
          *
          * If not set, it will default to "ProxerLibJava/<version>"
          */
+        @Suppress("unused")
         fun userAgent(userAgent: String) = this.apply { this.userAgent = userAgent }
 
         /**

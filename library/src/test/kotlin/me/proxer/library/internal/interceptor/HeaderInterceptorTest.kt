@@ -3,7 +3,7 @@ package me.proxer.library.internal.interceptor
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.slot
-import me.proxer.library.BuildConfig.VERSION
+import me.proxer.library.BuildConfig.version
 import me.proxer.library.ProxerApi
 import me.proxer.library.ProxerTest
 import me.proxer.library.runRequest
@@ -44,7 +44,7 @@ class HeaderInterceptorTest : ProxerTest() {
             api.notifications.news().build().execute()
         }
 
-        request.headers["User-Agent"] shouldBeEqualTo "ProxerLibJava/$VERSION"
+        request.headers["User-Agent"] shouldBeEqualTo "ProxerLibJava/$version"
     }
 
     @Test

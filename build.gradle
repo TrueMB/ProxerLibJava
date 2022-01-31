@@ -15,7 +15,7 @@ allprojects {
     group = rootProject.ext.group
 
     repositories {
-        jcenter()
+        mavenCentral()
     }
 }
 
@@ -27,4 +27,20 @@ tasks.named("dependencyUpdates").configure {
 
 wrapper {
     gradleVersion = project.ext.gradleVersion
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }

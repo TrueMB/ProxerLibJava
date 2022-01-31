@@ -12,7 +12,6 @@ import me.proxer.library.util.ProxerUtils
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.util.EnumSet
-import java.util.Locale
 
 /**
  * @author Ruben Gees
@@ -45,23 +44,21 @@ internal class DelimitedEnumSetAdapterFactory : JsonAdapter.Factory {
         )
     }
 
-    private class DelimitedEnumSetAdapter<T : Enum<T>> internal constructor(
+    private class DelimitedEnumSetAdapter<T : Enum<T>>(
         private val enumType: Class<T>,
         private val delimiter: String
     ) : JsonAdapter<Set<T>>() {
 
-        private val enumMap = enumType.enumConstants
-            .map { constant ->
-                try {
-                    val annotation = enumType.getField(constant.name).getAnnotation(Json::class.java)
-                    val name = annotation?.name ?: constant.name
+        private val enumMap = enumType.enumConstants.associate { constant ->
+            try {
+                val annotation = enumType.getField(constant.name).getAnnotation(Json::class.java)
+                val name = annotation?.name ?: constant.name
 
-                    name.toLowerCase(Locale.US) to constant
-                } catch (error: NoSuchFieldException) {
-                    throw AssertionError("Missing field in ${enumType.name}", error)
-                }
+                name.lowercase() to constant
+            } catch (error: NoSuchFieldException) {
+                throw AssertionError("Missing field in ${enumType.name}", error)
             }
-            .toMap()
+        }
 
         private val fallbackEnum = enumType.getAnnotation(FallbackEnum::class.java)?.let {
             java.lang.Enum.valueOf(enumType, it.name)
@@ -73,7 +70,7 @@ internal class DelimitedEnumSetAdapterFactory : JsonAdapter.Factory {
 
                 emptySet()
             } else {
-                val rawParts = reader.nextString().trim().toLowerCase(Locale.US)
+                val rawParts = reader.nextString().trim().lowercase()
 
                 if (rawParts.isEmpty()) {
                     emptySet()

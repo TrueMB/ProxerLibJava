@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm"
+    id 'org.jetbrains.kotlin.jvm'
     id "org.jetbrains.kotlin.kapt"
     id "org.jetbrains.dokka"
 
@@ -10,7 +10,7 @@ plugins {
     id "io.gitlab.arturbosch.detekt"
     id "org.jlleitschuh.gradle.ktlint"
 
-    id "de.fuerstenau.buildconfig"
+    id "com.github.gmazzo.buildconfig"
 }
 
 apply from: "${rootDir}/gradle/dependencies.gradle"
@@ -48,7 +48,7 @@ task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
         allWarningsAsErrors = true
         freeCompilerArgs = ["-Xjsr305=strict", "-progressive"]
     }
@@ -65,8 +65,11 @@ test {
 }
 
 buildConfig {
-    packageName = "me.proxer.library"
-    version = project.version
+    packageName("me.proxer.library")  // forces the package. Defaults to '${project.group}'
+
+    useKotlinOutput()   // adds `internal` modifier to all declarations
+    buildConfigField("String", "packageName", "\"me.proxer.library\"")
+    buildConfigField("String", "version", provider { "\"${project.version}\"" })
 }
 
 jacoco {
@@ -75,8 +78,8 @@ jacoco {
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        html.enabled = false
+        xml.required = true
+        html.required = false
     }
 }
 

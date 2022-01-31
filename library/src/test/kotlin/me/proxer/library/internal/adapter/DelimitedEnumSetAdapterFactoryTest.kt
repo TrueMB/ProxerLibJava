@@ -164,7 +164,7 @@ class DelimitedEnumSetAdapterFactoryTest {
 
     @JsonClass(generateAdapter = true)
     data class GenderTestClass(
-        @field:DelimitedEnumSet val genders: Set<Gender>? = null
+        @field:DelimitedEnumSet(delimiter = " ") val genders: Set<Gender>? = null
     )
 
     @JsonClass(generateAdapter = true)
@@ -174,6 +174,6 @@ class DelimitedEnumSetAdapterFactoryTest {
 
     @JsonClass(generateAdapter = true)
     data class FskConstrainTestClass(
-        @field:DelimitedEnumSet val fskConstraints: Set<FskConstraint>? = null
+        @field:DelimitedEnumSet(delimiter = " ") val fskConstraints: Set<FskConstraint>? = null
     )
 }

@@ -27,7 +27,7 @@ import me.proxer.library.internal.adapter.DelimitedStringSet
 data class MediaListEntry(
     @Json(name = "id") override val id: String,
     @Json(name = "name") val name: String,
-    @field:DelimitedStringSet(valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
+    @field:DelimitedStringSet(delimiter = " ", valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
     @Json(name = "medium") val medium: Medium,
     @Json(name = "count") val episodeAmount: Int,
     @Json(name = "state") val state: MediaState,

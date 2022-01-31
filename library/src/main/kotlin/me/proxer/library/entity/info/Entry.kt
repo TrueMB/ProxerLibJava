@@ -43,7 +43,7 @@ import me.proxer.library.internal.adapter.DelimitedEnumSet
 data class Entry(
     @Json(name = "id") override val id: String,
     @Json(name = "name") val name: String,
-    @field:DelimitedEnumSet @Json(name = "fsk") val fskConstraints: Set<FskConstraint>,
+    @field:DelimitedEnumSet(delimiter = " ") @Json(name = "fsk") val fskConstraints: Set<FskConstraint>,
     @Json(name = "description") val description: String,
     @Json(name = "medium") val medium: Medium,
     @Json(name = "count") val episodeAmount: Int,

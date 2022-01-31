@@ -40,7 +40,7 @@ data class CalendarEntry(
     @Json(name = "industryname") val industryName: String?,
     @Json(name = "weekday") val weekDay: CalendarDay,
     @Json(name = "uptime") val uploadDate: Date,
-    @field:DelimitedStringSet(valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
+    @field:DelimitedStringSet(delimiter = " ", valuesToKeep = ["Slice of Life"]) @Json(name = "genre") val genres: Set<String>,
     @Json(name = "rate_sum") val ratingSum: Int,
     @Json(name = "rate_count") val ratingAmount: Int
 ) : ProxerIdItem, ProxerDateItem {
