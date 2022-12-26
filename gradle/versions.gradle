@@ -1,29 +1,29 @@
 ext {
-    version = "5.3.4"
+    version = "5.3.5"
     group = "com.github.TrueMB"
 
-    gradleVersion = "7.3.3"
+    gradleVersion = "7.6"
 
-    kotlinVersion = "1.6.10"
-    kotlinCoroutinesVersion = "1.6.0"
-    dokkaVersion = "1.6.10"
+    kotlinVersion = "1.7.21"
+    kotlinCoroutinesVersion = "1.6.4"
+    dokkaVersion = "1.7.20"
 
-    jacocoVersion = "0.8.7"
-    ktlintPluginVersion = "10.2.1"
-    ktlintVersion = "0.43.2"
-    detektVersion = "1.19.0"
+    jacocoVersion = "0.8.8"
+    ktlintPluginVersion = "11.0.0"
+    ktlintVersion = "0.48.0"
+    detektVersion = "1.22.0"
 
-    gradleVersionsPluginVersion = "0.41.0"
-    buildConfigPluginVersion = "3.0.3"
+    gradleVersionsPluginVersion = "0.44.0"
+    buildConfigPluginVersion = "3.1.0"
 
     retrofitVersion = "2.9.0"
-    okHttpVersion = "4.9.3"
-    okioVersion = "3.0.0"
-    moshiVersion = "1.13.0"
+    okHttpVersion = "4.10.0"
+    okioVersion = "3.2.0"
+    moshiVersion = "1.14.0"
     moshiLazyAdaptersVersion = "2.2"
 
-    junitVersion = "5.8.2"
+    junitVersion = "5.9.1"
     concurrentUnitVersion = "0.4.6"
-    kluentVersion = "1.68"
-    mockkVersion = "1.12.2"
+    kluentVersion = "1.72"
+    mockkVersion = "1.13.3"
 }
