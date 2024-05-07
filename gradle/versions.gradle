@@ -1,5 +1,5 @@
 ext {
-    version = "5.3.5"
+    version = "5.4.0"
     group = "com.github.TrueMB"
 
     gradleVersion = "7.6"
